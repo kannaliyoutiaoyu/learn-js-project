@@ -1,2 +1,132 @@
 /*first go to github. wish me have good luck*/
 	
+/*I im in the javscript dom animation.
+ * this is in the ten  .
+ * wish  me good lick.
+ * i know i am is wordy. i am is first say english.i can use three *** different wordy.   
+ * place ignore this*/
+
+/*test js control time*/
+
+function positionMessage{
+	/*test测试*/
+	if(!document.getElementById) return false;
+	if(!document.getElementById("message")) return false;
+	/*performance性能*/
+	var test_time = document.getElementById("message");
+	/*control控制*/
+	test_time.style.position = "absolute"
+	test_time.style.left ="50px"
+	test_time.style.top="100px"
+	movement = setTimeout("movemessage()",5000);
+}
+/*execute 执行*/
+addLoadEvent(positionMessage);
+/*cancel execute*/
+clearTimeout(PositionMessage);
+
+
+
+
+
+/*book`s have repeat.
+ * now let`s look new project
+ * this`s really animation*/
+function animation{
+	/*test*/
+	if(!document.getElementById) return false;
+	if(!document.getElementById("message"));
+	/*performance*/  
+	var elem = document.getElementById("message");
+	/*control*/
+	var xpos = pareInt(elem.style.left);
+	var ypos = pareInt(elem.style.top);
+	if(xpos==200&ypos==200){
+		return true
+	}
+	if(xpos<200){
+		xpos++;
+	}
+	if(xpos<200){
+		xpos--;
+	}
+	if(ypos<200){
+		ypos++;
+	}
+	if(ypos<200){
+		ypos--;
+	};
+	elem.style.left=xpos+"px";
+	elem.style.top=ypos+"px";	
+	movement=setTimeout("moveMessage()",10);
+};
+
+
+
+
+/*js script*/
+function addLoadEvent(func){
+	var oldonload =window.onload;
+	if(typeof window.onload !='function'){
+		window.onload =func
+	}
+	else{
+		window.onload=function(){
+			oldonload();
+			func();
+		}
+	}
+}
+
+function moveElement(elementID,final_x,final_y,interval){
+	/***************** test and amendment修正    some chinese`s help me learn english ..*/
+	
+	
+	/* in the here different javascript dom book .I change it
+	 * because i think this can help we programmer know this  code
+	 * 重要的内容我会翻译成中文。用以帮助那些刚刚入门编程的人们。
+	 * 如果你看过javascript dom 你就会知道。我的这些代码和原文并不一样。 
+	 * 例如对于xops与final_x的验证和elem.style.left的重新赋值
+	 * 我将他们放在了 test 单行注释之下。这样有利于js代码功能的分区，从而提高了程序员在维护时候的寻址速度。*/
+	if(!document.getElementById)return false;
+	if(!document.getElementById(elementID))return false;
+	if(xpos == final_x&&ypos==final_y){
+		return ture
+	}
+	if(!elem.style.left){
+		elem.style.left ="0px";
+	}
+	if(!elem.style.top){
+		elem.style.top="0px"
+	}
+	/*performance性能*/
+	var elem =document.getElementById(elementID);
+	/*execute执行*/
+	if(elem.movement){
+		clertTimeout(elme.moveement)
+	}
+	var xpos = parseInt(elem.style.left);
+	var ypos = parseInt(elem.style.top);
+	
+	if(xpos<final_x){
+		var dist =Math.celi((final_x-xpos)/10);     /*way there don`t write  xpos+= Matg.celi((final_x-x)/10);*/
+		xops = xpos+dist;
+	}
+	if(xpos>final_x){
+		var dist =Math.celi((final_x-xpos)/10);     
+		xops = xpos+dist;
+	}
+	if(ypos<final_y){
+		var dist =Math.celi((final_y-ypos)/10);     
+		yops = ypos+yist;
+	}
+	if(ypos>final_y){
+		var dist =Math.celi((final_y-ypos)/10);     
+		yops = ypos+yist;                             /*do you know way there is +...  Because + - */
+	}
+	elem.style.left=xpos+"px";
+	elem.style.top=ypos+"px";
+	
+	var repeat ="moveElement('"elementID+"',"final_x+","final_y+","interval+")";
+	elem.movement=setTimeout(repeat,interval);
+}
